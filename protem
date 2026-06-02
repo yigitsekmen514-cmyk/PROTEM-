@@ -1,0 +1,58 @@
+# Soru 18: Saat Dilimi
+saat = float(input("Lütfen saati giriniz (Örn: 22.00): "))
+
+if 6.00 <= saat < 12.00:
+    print("Günaydın")
+elif 12.00 <= saat < 18.00:
+    print("Tünaydın")
+elif 18.00 <= saat < 22.00:
+    print("İyi Akşamlar")
+else:
+    # Saat 22.00 ile 05.59 arasındaysa veya gece yarısıysa
+    print("İyi Geceler")
+
+
+# Soru 38: Bölümden Kalan
+sayi1 = int(input("Birinci sayıyı giriniz: "))
+sayi2 = int(input("İkinci sayıyı giriniz: "))
+
+kalan = sayi1 % sayi2
+
+print(f"Kalan: {kalan}")
+
+
+# Soru 58: Son Harf Büyüt
+metin = input("Bir kelime veya metin giriniz: ")
+
+if len(metin) > 0:
+    # Son harf hariç kısım + Son harfin büyük hali
+    yeni_metin = metin[:-1] + metin[-1].upper()
+    print(yeni_metin)
+else:
+    print("Boş bir metin girdiniz!")
+
+
+# Soru 78: Sondan İkinci
+# Örnek bir liste tanımlayalım
+liste = [1, 2, 3, 4]
+
+# Listenin en az 2 elemanı olduğundan emin olmak için kontrol ekleyebiliriz
+if len(liste) >= 2:
+    sondan_ikinci = liste[-2]
+    print(f"Listenin sondan ikinci elemanı: {sondan_ikinci}")
+else:
+    print("Listede yeterli eleman yok!")
+
+
+# Soru 98: Dosya Yöneticisi
+print("Mevcut Komutlar: LS, RM, MKDIR")
+komut = input("Bir komut giriniz: ").upper()
+
+if komut == "LS":
+    print("Dosyalar ve klasörler listeleniyor...")
+elif komut == "RM":
+    print("Dosya siliniyor...")
+elif komut == "MKDIR":
+    print("Yeni klasör oluşturuluyor...")
+else:
+    print("Geçersiz veya bilinmeyen komut!")
